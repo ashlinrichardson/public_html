@@ -1,0 +1,140 @@
+<html><title>Ashlin Richardson | ashlinrichardson.com</title>
+<body><style>body{margin:0;  opacity: 1.0; }</style>
+<script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-98367425-1', 'auto'); ga('send', 'pageview')
+</script>
+<script>
+var hsv2rgb = function(h,s,v){
+  var rgb, i, data = []
+  if(s === 0){
+    rgb = [v, v, v]
+  }else{
+    h = h / 60.; i = Math.floor(h); data = [v*(1.-s), v * (1.-s*(h-i)), v*(1.-s*(1.-(h-i)))]
+    switch(i){
+      case 0:  rgb = [v,       data[2], data[0]]; break
+      case 1:  rgb = [data[1], v,       data[0]]; break
+      case 2:  rgb = [data[0], v,       data[2]]; break
+      case 3:  rgb = [data[0], data[1], v      ]; break
+      case 4:  rgb = [data[2], data[0], v      ]; break
+      default: rgb = [v,       data[0], data[1]]; break
+    }
+  }
+  return '#' + rgb.map(function(x){ 
+    return ("0" + Math.round(x*255.).toString(16)).slice(-2);
+  }).join('');
+}
+
+var canvas = document.createElement('canvas');document.body.appendChild(canvas)
+var my_x = 0, my_y = 0, last_x = 0, last_y = 0, dx = 0, dy = 0;
+
+/* load image data */ 
+function load_img(fn){ var img = new Image(); img.src = fn; return img}
+
+/* draw image */
+function draw_img(x, ctx){
+  ctx.globalAlpha =  1. - .5*((Math.abs(dx) + Math.abs(dy)) /( ctx.h() + ctx.w())) 
+  if(ctx.w() > ctx.h()){
+    ctx.drawImage(x, 0, 0, ctx.w(), ctx.w() * x.height / x.width)
+  }
+  else{
+    ctx.drawImage(x, 0, 0, ctx.h() * x.width/ x.height, ctx.h())
+  }
+}
+
+var img = load_img("_A7A8515_.jpg"), canvas = document.getElementsByTagName("canvas")[0], ctx = canvas.getContext("2d")
+ctx.font_size = 14
+ctx.w = function(){ return window.outerWidth}
+ctx.h = function(){ return window.outerHeight}
+
+var symbol = load_img('linked-in.png')
+var draw_symbol = function(){
+  var s_f = 7, pad = ctx.w()/20., s = symbol
+  var ww = window.innerWidth, wh = window.innerHeight
+  var w = ww - pad, h = wh - pad, w_s = s.width, h_s = s.height
+  var wf = (ww - pad) / (s_f * w_s), lwf = w_s * wf, lhf = h_s * wf
+  
+
+  ctx.save();
+  ctx.globalAlpha = 0.5;
+  //ctx.drawImage(s, w - lwf, h - lhf, lwf, lhf)
+  ctx.drawImage(s, pad, h - lhf, lwf, lhf)
+  ctx.restore()
+}
+
+/* wrap text around a window region-- via ashblue */
+function wrap_text(my_str, start_x, start_y, width_frac, my_color, font_frac){
+  if(start_x == null) start_x = 0
+  if(start_y == null) start_y = 0
+  if(width_frac == null) width_frac = 1.
+  if(my_color == null) my_color = 'white'
+  if(font_frac == null) font_frac = 1.
+
+  var s = my_str.toString(), myX = start_x, myY = start_y, line = '', lines = [], w = ctx.w(), h = ctx.h(), line_test = '', words = s.split(' '), font_size = ctx.font_size * font_frac;
+  ctx.font = font_size +'px Arial'
+  ctx.fillStyle = my_color
+  /* place words one by one */
+  for(var j = 0; j < words.length; j++){
+    line_test = line + words[j] + ' '
+
+    /* wrap if over the edge */
+    if(ctx.measureText(line_test).width > (w* width_frac)){
+      myY = lines.length * font_size + font_size
+      lines.push({text: line, height: myY})
+      line = words[j] + ' '
+    }else{
+      line = line_test
+    }
+  }
+
+  /* catch last line if something left over */
+  if(line.length > 0){
+    current_y = lines.length * font_size + font_size
+    lines.push({text: line.trim(), height: current_y})
+  }
+
+  /* plot text */
+  for(var j = 0, len = lines.length; j < len; j++){
+    if(my_color != 0)
+      ctx.fillStyle = my_color
+    else
+      ctx.fillStyle = hsv2rgb( (1.*j) * 360. / (1. * lines.length), .19, .29) 
+    ctx.fillText(lines[j].text, myX, lines[j].height + start_y)
+  }
+}
+
+/* canvas resize */
+function resize(){
+  canvas.width = ctx.w(); canvas.height = ctx.h(); ctx.moveTo(0,0);
+}
+
+window.onresize = function(event){ update()}
+
+function update(){
+  resize()
+  draw_img(img, ctx)
+  ctx.font_size = 44
+  if(ctx.w() > ctx.h()){
+    ctx.font_size = ctx.w() / 30 
+  }
+  else{
+    ctx.font_size = ctx.h() / 30
+  }
+  var d = ctx.w() / 20.
+  wrap_text("Ashlin Richardson", d, d, 1., 0)
+  wrap_text("Interdisciplinary communicator, data scientist, engineer-developer and synthetic practitioner, passionate to create evidence-based understanding suitable for advancement", d, d+1.33*ctx.font_size, .33, 0, .66)  
+ // draw_symbol()
+}
+
+window.onload = function(){ update()}
+
+document.onmousemove = function(e){
+  var x = e.clientX, y = e.clientY; last_x = my_x; last_y = my_y; my_x = x; my_y = y;
+  dx = my_x - last_x;  dy = my_y - last_y;
+  update()
+}
+</script>
+</body>
+</html>
