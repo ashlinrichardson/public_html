@@ -1,5 +1,35 @@
 <html><title>Ashlin Richardson | ashlinrichardson.com</title>
 <body><style>body{margin:0;  opacity: 1.0; }</style>
+<style>
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    float: left;
+}
+</style>
+
+<div class="nav" id="myTopnav">
+<div class="top-left">
+<br>
+<a href="http://www.ashlinrichardson.com" target="_blank"><img src="http://ashlinrichardson.com/icon/photo.jpg" height=66 width=66 style="border-radius: 66px;"></a><br><br>
+<a href="http://web.uvic.ca/~ashy/" target="_blank"><img src="http://ashlinrichardson.com/icon/paper.png" height=66 width=66 style="border-radius: 66px;"></a><br><br>
+<a href="https://www.linkedin.com/in/ashlinrichardson/" target="_blank"><img src="http://ashlinrichardson.com/icon/linkedin.png" height=66 width=66 style=""></a><br><br>
+<a href="mailto:richardson.ashlin@gmail.com"><img src="http://ashlinrichardson.com/icon/gmail.png" height=66 width=66 style=""></a><br><br>
+<a href="https://github.com/ashlinrichardson" target="_blank"><img src="http://ashlinrichardson.com/icon/github.png" height=66 width=66 style="border-radius: 66px;"></a><br><br>
+<a href="https://www.facebook.com/ashlin.richardson" target="_blank"><img src="http://ashlinrichardson.com/icon/facebook.png" height=66 width=66  style="border-radius: 66px;"></a><br><br>
+<a href="https://soundcloud.com/ashrichardson" target="_blank"><img src="http://ashlinrichardson.com/icon/soundcloud.jpg" height=66 width=66  style="border-radius: 66px;"></a><br><br>
+<a href="https://www.instagram.com/ashlinrichardson/" target="_blank"><img src="http://ashlinrichardson.com/icon/insta.png" height=66 width=66  style="border-radius: 66px;"></a><br><br>
+<a href="https://www.youtube.com/watch?v=UElo4Pt7hto&list=PLSCyKgJq4d46pVRggwiQWh_ZH2oitG90-&index=8" target="_blank"><img src="http://ashlinrichardson.com/icon/youtube.png" height=66 width=66 style=""></a><br><br>
+</div>
+<!--
+<a id="main" href="index.html" onclick="set_active('main')">Home</a>
+-->
+</div>
+
+  <!-- <a id="bio" href="index.html"  onclick="set_active('bio')">Team</a> -->
+</div>
+
 <script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -69,7 +99,7 @@ function wrap_text(my_str, start_x, start_y, width_frac, my_color, font_frac){
   if(start_x == null) start_x = 0
   if(start_y == null) start_y = 0
   if(width_frac == null) width_frac = 1.
-  if(my_color == null) my_color = 'white'
+  if(my_color == null) my_color = 'black'
   if(font_frac == null) font_frac = 1.
 
   var s = my_str.toString(), myX = start_x, myY = start_y, line = '', lines = [], w = ctx.w(), h = ctx.h(), line_test = '', words = s.split(' '), font_size = ctx.font_size * font_frac;
@@ -122,19 +152,25 @@ function update(){
   else{
     ctx.font_size = ctx.h() / 30
   }
-  var d = ctx.w() / 20.
-  wrap_text("Ashlin Richardson", d, d, 1., 0)
-  wrap_text("Interdisciplinary communicator, data scientist, engineer-developer and synthetic practitioner, passionate to create evidence-based understanding suitable for advancement", d, d+1.33*ctx.font_size, .33, 0, .66)  
+  var d = ctx.w() / 15.
+  var d2 = ctx.h() / 15.
+  wrap_text("Ashlin Richardson", d, d2, 1., null)
+  wrap_text("Interdisciplinary data scientist, engineering developer and communicator, passionately seeking evidence based understanding vital to advancement", d, d2+1.33*ctx.font_size, .33, null, .66)  
  // draw_symbol()
 }
 
 window.onload = function(){ update()}
 
 document.onmousemove = function(e){
+  return;
   var x = e.clientX, y = e.clientY; last_x = my_x; last_y = my_y; my_x = x; my_y = y;
   dx = my_x - last_x;  dy = my_y - last_y;
   update()
 }
 </script>
+
+
+
+
 </body>
 </html>
