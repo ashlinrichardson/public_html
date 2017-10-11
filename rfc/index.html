@@ -87,6 +87,7 @@ function set_active(a){
   <a id="cms" href="index.html" onclick="set_active('cms')">CMS-Lite Services</a>
   <a id="bio" href="index.html"  onclick="set_active('bio')">Team</a>
   <!--<a id="contact" href="index.html"  onclick="set_active('contact')">Contact</a>-->
+  <a id="bio" href="index.html"  onclick="set_active('testimonials')">Reviews</a>
   <a href="javascript:void(0);" style="font-size:15px;" class="icon"  onClick="myFunction(); return false;">&#9776;</a> <!-- onClick="function(); return false;"-->
 </div>
 
@@ -120,7 +121,6 @@ function set_active(a){
 <footer id="footer">
   <div id="copyright_text">&nbsp;&nbsp;&nbsp;Copyright &copy; 2017 Taurus Consulting</div>
 </footer>
-
 <script>
 function cms(){
 //alert("cms");
@@ -188,6 +188,34 @@ Experienced IT project manager and CEO\
                         </div>\
 <hr style="clear: both;" color="white" />';
 }
+function testimonials(){
+  document.getElementById('my-content').innerHTML  ='<style>.verse{font-weight: bold; margin-left:2em; width: 444px;}</style>\
+                                                    <style>.name{text-align: right; margin-left:2em; width: 444px;}</style>\
+        <hline>\
+        <div class="verse">"Thanks heaps for your help on this."</div>\
+        <br>\
+        <div class="name">-- Official at Ministry of Forests, Lands and Natural Resource Operations</div>\
+        <br><br>\
+        <div class="verse">"You folks are quick! Thanks, much appreciated."</div>\
+        <br>\
+        <div class="name">-- Director at Ministry of Environment</div>\
+        <br><br>\
+        <div class="verse">"Thanks for all your help! You are awesome."</div>\
+        <br>\
+        <div class="name">-- Official at Ministry of Environment</div>\
+        <br><br>\
+        <div class="verse">"You&apos;re awesome at this, and gaining a solid reputation here in the branch as someone who can be relied on. Thanks for all your good work."</div>\
+        <br>\
+        <div class="name">-- Official at Ministry of Forests, Lands and Natural Resource Operations</div>\
+        <br>\
+        <div class="verse">"Thanks for the great and quick work on this-- as always truly appreciated."</div>\
+        <br>\
+        <div class="name">-- Manager at Ministry of Environment</div>\
+        <br><br>\
+        <div class="verse">"Thank you so very much, Ash, we really appreciate all of your efforts."</div>\
+        <br>\
+        <div class="name">-- Executive at Ministry of Environment</div><br>';
+}
 
 var s = 'cms';
 if(has_local_storage){
@@ -195,6 +223,9 @@ if(has_local_storage){
 }
 if(s=='cms'){
   cms()
+}
+else if(s=='testimonials'){
+  testimonials()
 }
 else if(s=='bio'){
   bio()
