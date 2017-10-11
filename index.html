@@ -9,18 +9,46 @@
 }
 </style>
 
+<style>
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+</style>
+
+
 <div class="nav" id="myTopnav">
 <div class="top-left">
 <br>
-<a href="http://www.ashlinrichardson.com" target="_blank"><img src="http://ashlinrichardson.com/icon/photo.jpg" height=66 width=66 style="border-radius: 66px;" class="my_img"></a><br><br>
-<a href="mailto:richardson.ashlin@gmail.com"><img src="http://ashlinrichardson.com/icon/gmail.png" height=66 width=66 style="" class="my_img"></a><br><br>
-<a href="https://www.linkedin.com/in/ashlinrichardson/" target="_blank"><img src="http://ashlinrichardson.com/icon/linkedin.png" height=66 width=66 style="" class="my_img"></a><br><br>
-<a href="http://web.uvic.ca/~ashy/" target="_blank"><img src="http://ashlinrichardson.com/icon/paper.png" height=66 width=66 style="border-radius: 66px;" class="my_img"></a><br><br>
-<a href="https://github.com/ashlinrichardson" target="_blank"><img src="http://ashlinrichardson.com/icon/github.png" height=66 width=66 style="border-radius: 66px;" class="my_img"></a><br><br>
-<a href="https://www.facebook.com/ashlin.richardson" target="_blank"><img src="http://ashlinrichardson.com/icon/facebook.png" height=66 width=66  style="border-radius: 66px;" class="my_img"></a><br><br>
-<a href="https://soundcloud.com/ashrichardson" target="_blank"><img src="http://ashlinrichardson.com/icon/soundcloud.jpg" height=66 width=66  style="border-radius: 66px;" class="my_img"></a><br><br>
-<a href="https://www.instagram.com/ashlinrichardson/" target="_blank"><img src="http://ashlinrichardson.com/icon/insta.png" height=66 width=66  style="border-radius: 66px;" class="my_img"></a><br><br>
-<a href="https://www.youtube.com/watch?v=UElo4Pt7hto&list=PLSCyKgJq4d46pVRggwiQWh_ZH2oitG90-&index=8" target="_blank"><img src="http://ashlinrichardson.com/icon/youtube.png" height=66 width=66 style="" class="my_img"></a><br><br>
+<div class="tooltip"><a href="http://www.ashlinrichardson.com" target="_blank"><img src="http://ashlinrichardson.com/icon/photo.jpg" height=66 width=66 style="border-radius: 66px;" class="my_img"></a><span class="tooltiptext">Contractor</span></div><br><br>
+<div class="tooltip"><a href="mailto:richardson.ashlin@gmail.com"><img src="http://ashlinrichardson.com/icon/gmail.png" height=66 width=66 style="" class="my_img"></a><span class="tooltiptext">Connect by Email</span></div><br><br>
+<div class="tooltip"><a href="https://www.linkedin.com/in/ashlinrichardson/" target="_blank"><img src="http://ashlinrichardson.com/icon/linkedin.png" height=66 width=66 style="" class="my_img"></a><span class="tooltiptext">Connect on LinkedIn</span></div><br><br>
+<div class="tooltip"><a href="http://web.uvic.ca/~ashy/" target="_blank"><img src="http://ashlinrichardson.com/icon/paper.png" height=66 width=66 style="border-radius: 66px;" class="my_img"></a><span class="tooltiptext">Publications and Talks</span></div><br><br>
+<div class="tooltip"><a href="https://github.com/ashlinrichardson" target="_blank"><img src="http://ashlinrichardson.com/icon/github.png" height=66 width=66 style="border-radius: 66px;" class="my_img"></a><span class="tooltiptext">Connect on GitHub</span></div><br><br>
+<div class="tooltip"><a href="https://www.facebook.com/ashlin.richardson" target="_blank"><img src="http://ashlinrichardson.com/icon/facebook.png" height=66 width=66  style="border-radius: 66px;" class="my_img"></a><span class="tooltiptext">Connect on Facebook</span></div><br><br>
+<div class="tooltip"><a href="https://soundcloud.com/ashrichardson" target="_blank"><img src="http://ashlinrichardson.com/icon/soundcloud.jpg" height=66 width=66  style="border-radius: 66px;" class="my_img"></a><span class="tooltiptext">Connect on SoundCloud</span></div><br><br>
+<div class="tooltip"><a href="https://www.instagram.com/ashlinrichardson/" target="_blank"><img src="http://ashlinrichardson.com/icon/insta.png" height=66 width=66  style="border-radius: 66px;" class="my_img"></a><span class="tooltiptext">Connect on Instagram</span></div><br><br>
+<div class="tooltip"><a href="https://www.youtube.com/watch?v=UElo4Pt7hto&list=PLSCyKgJq4d46pVRggwiQWh_ZH2oitG90-&index=8" target="_blank"><img src="http://ashlinrichardson.com/icon/youtube.png" height=66 width=66 style="" class="my_img"></a><span class="tooltiptext">Connect on Youtube</span></div><br><br>
 </div>
 <!--
 <a id="main" href="index.html" onclick="set_active('main')">Home</a>
@@ -165,7 +193,7 @@ function update(){
   var dx = Math.max(111, ctx.w() / 15.)
   var dy = 18; //d //15; //ctx.h() / 30.
   wrap_text("Ashlin Richardson", dx, dy, 1., null)
-  wrap_text("Interdisciplinary data scientist, engineer, developer and communicator, passionately seeking evidence based understanding vital to advancement", dx + 15, dy+1.33*ctx.font_size, .33, null, .66)  
+  wrap_text("Interdisciplinary data scientist, engineer, developer and communicator, passionately seeking evidence based understanding vital to advancement", dx, dy+1.33*ctx.font_size, .33, null, .66)  
  // draw_symbol()
 }
 
