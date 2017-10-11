@@ -12,15 +12,15 @@
 <div class="nav" id="myTopnav">
 <div class="top-left">
 <br>
-<a href="http://www.ashlinrichardson.com" target="_blank"><img src="http://ashlinrichardson.com/icon/photo.jpg" height=66 width=66 style="border-radius: 66px;"></a><br><br>
-<a href="http://web.uvic.ca/~ashy/" target="_blank"><img src="http://ashlinrichardson.com/icon/paper.png" height=66 width=66 style="border-radius: 66px;"></a><br><br>
-<a href="https://www.linkedin.com/in/ashlinrichardson/" target="_blank"><img src="http://ashlinrichardson.com/icon/linkedin.png" height=66 width=66 style=""></a><br><br>
-<a href="mailto:richardson.ashlin@gmail.com"><img src="http://ashlinrichardson.com/icon/gmail.png" height=66 width=66 style=""></a><br><br>
-<a href="https://github.com/ashlinrichardson" target="_blank"><img src="http://ashlinrichardson.com/icon/github.png" height=66 width=66 style="border-radius: 66px;"></a><br><br>
-<a href="https://www.facebook.com/ashlin.richardson" target="_blank"><img src="http://ashlinrichardson.com/icon/facebook.png" height=66 width=66  style="border-radius: 66px;"></a><br><br>
-<a href="https://soundcloud.com/ashrichardson" target="_blank"><img src="http://ashlinrichardson.com/icon/soundcloud.jpg" height=66 width=66  style="border-radius: 66px;"></a><br><br>
-<a href="https://www.instagram.com/ashlinrichardson/" target="_blank"><img src="http://ashlinrichardson.com/icon/insta.png" height=66 width=66  style="border-radius: 66px;"></a><br><br>
-<a href="https://www.youtube.com/watch?v=UElo4Pt7hto&list=PLSCyKgJq4d46pVRggwiQWh_ZH2oitG90-&index=8" target="_blank"><img src="http://ashlinrichardson.com/icon/youtube.png" height=66 width=66 style=""></a><br><br>
+<a href="http://www.ashlinrichardson.com" target="_blank"><img src="http://ashlinrichardson.com/icon/photo.jpg" height=66 width=66 style="border-radius: 66px;" class="my_img"></a><br><br>
+<a href="mailto:richardson.ashlin@gmail.com"><img src="http://ashlinrichardson.com/icon/gmail.png" height=66 width=66 style="" class="my_img"></a><br><br>
+<a href="https://www.linkedin.com/in/ashlinrichardson/" target="_blank"><img src="http://ashlinrichardson.com/icon/linkedin.png" height=66 width=66 style="" class="my_img"></a><br><br>
+<a href="http://web.uvic.ca/~ashy/" target="_blank"><img src="http://ashlinrichardson.com/icon/paper.png" height=66 width=66 style="border-radius: 66px;" class="my_img"></a><br><br>
+<a href="https://github.com/ashlinrichardson" target="_blank"><img src="http://ashlinrichardson.com/icon/github.png" height=66 width=66 style="border-radius: 66px;" class="my_img"></a><br><br>
+<a href="https://www.facebook.com/ashlin.richardson" target="_blank"><img src="http://ashlinrichardson.com/icon/facebook.png" height=66 width=66  style="border-radius: 66px;" class="my_img"></a><br><br>
+<a href="https://soundcloud.com/ashrichardson" target="_blank"><img src="http://ashlinrichardson.com/icon/soundcloud.jpg" height=66 width=66  style="border-radius: 66px;" class="my_img"></a><br><br>
+<a href="https://www.instagram.com/ashlinrichardson/" target="_blank"><img src="http://ashlinrichardson.com/icon/insta.png" height=66 width=66  style="border-radius: 66px;" class="my_img"></a><br><br>
+<a href="https://www.youtube.com/watch?v=UElo4Pt7hto&list=PLSCyKgJq4d46pVRggwiQWh_ZH2oitG90-&index=8" target="_blank"><img src="http://ashlinrichardson.com/icon/youtube.png" height=66 width=66 style="" class="my_img"></a><br><br>
 </div>
 <!--
 <a id="main" href="index.html" onclick="set_active('main')">Home</a>
@@ -75,7 +75,7 @@ function draw_img(x, ctx){
 }
 
 var img = load_img("_A7A8515_.jpg"), canvas = document.getElementsByTagName("canvas")[0], ctx = canvas.getContext("2d")
-ctx.font_size = 14
+ctx.font_size = 18
 ctx.w = function(){ return window.outerWidth}
 ctx.h = function(){ return window.outerHeight}
 
@@ -137,7 +137,17 @@ function wrap_text(my_str, start_x, start_y, width_frac, my_color, font_frac){
 
 /* canvas resize */
 function resize(){
-  canvas.width = ctx.w(); canvas.height = ctx.h(); ctx.moveTo(0,0);
+  canvas.width = ctx.w(); 
+  canvas.height = ctx.h();
+/*
+  if(canvas.width < 800){
+    canvas.width = 800;
+  }
+  if(canvas.height < 600){
+    canvas.height = 600;
+  }
+*/
+  ctx.moveTo(0,0);
 }
 
 window.onresize = function(event){ update()}
@@ -147,15 +157,15 @@ function update(){
   draw_img(img, ctx)
   ctx.font_size = 44
   if(ctx.w() > ctx.h()){
-    ctx.font_size = ctx.w() / 30 
+    ctx.font_size = ctx.w() / 25 
   }
   else{
-    ctx.font_size = ctx.h() / 30
+    ctx.font_size = ctx.h() / 25
   }
-  var d = ctx.w() / 15.
-  var d2 = ctx.h() / 15.
-  wrap_text("Ashlin Richardson", d, d2, 1., null)
-  wrap_text("Interdisciplinary data scientist, engineering developer and communicator, passionately seeking evidence based understanding vital to advancement", d, d2+1.33*ctx.font_size, .33, null, .66)  
+  var dx = Math.max(111, ctx.w() / 15.)
+  var dy = 18; //d //15; //ctx.h() / 30.
+  wrap_text("Ashlin Richardson", dx, dy, 1., null)
+  wrap_text("Interdisciplinary data scientist, engineer, developer and communicator, passionately seeking evidence based understanding vital to advancement", dx + 15, dy+1.33*ctx.font_size, .33, null, .66)  
  // draw_symbol()
 }
 
