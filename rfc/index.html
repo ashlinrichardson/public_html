@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html> <!--
-*** hello world ***
-https://en.support.wordpress.com/custom-design/editing-css/
-https://www.w3schools.com/css/tryit.asp?filename=trycss_dropdown_navbar 
-File location: http://www2.gov.bc.ca/StaticWebResources/static/shared/fonts/MyriadWebPro.ttf
-http://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/web-content-development-guides/developers-guide/css-elements#family
-keep nav bar fixed
-https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_black_fixed
-http://www.color-hex.com/color-palette/185
-https://www.w3.org/wiki/Creating_multiple_pages_with_navigation_menus
--->
+<html> 
 <head><style>
 body {margin:0;}
 .nav{overflow: hidden; background-color: #3B5998;}
@@ -27,7 +16,24 @@ footer{ background-color: #3B5998; color: #dfe3ee;}
   .nav.responsive {position: relative;}
   .nav.responsive .icon{ position: absolute; right: 0; top: 0; }
   .nav.responsive a{ float: none; display: block; text-align: left;}
-}</style>
+}
+
+h1 { color: #7c795d; font-family: 'Trocchi', serif; font-size: 45px; font-weight: normal; line-height: 48px; margin: 0; }
+
+
+h2 { color: #7c795d; font-family: 'Source Sans Pro', sans-serif; font-size: 28px; font-weight: 400; line-height: 32px; margin: 0 0 24px; }
+
+
+.subheader { font-size: 26px; font-weight: 300; color: #ffcc66; margin: 0 0 24px; }
+
+
+p { color: #4c4a37; font-family: 'Source Sans Pro', sans-serif; font-size: 18px; line-height: 32px; margin: 0 0 24px; }
+
+a:hover { color: #ffcc66 }
+
+.email { color: #8b9dc3;}
+
+</style>
 
 <script>
 
@@ -82,17 +88,20 @@ function set_active(a){
 </script>
 
 <div class="nav" id="myTopnav">
-  <!--<a id="home" href="index.html" onclick="set_active('home')">Home</a>-->
   <a id="cms" href="index.html" onclick="set_active('cms')"><img src="taurus-consulting-logo.png" height=25></a>
   <a id="cms" href="index.html" onclick="set_active('cms')">CMS-Lite Services</a>
   <a id="bio" href="index.html"  onclick="set_active('bio')">Team</a>
   <!--<a id="contact" href="index.html"  onclick="set_active('contact')">Contact</a>-->
-  <a id="bio" href="index.html"  onclick="set_active('testimonials')">Reviews</a>
+  <a id="reviews" href="index.html"  onclick="set_active('testimonials')">Reviews</a>
+  <a id="contact" href="index.html"  onclick="set_active('contact')">Contact</a>
   <a href="javascript:void(0);" style="font-size:15px;" class="icon"  onClick="myFunction(); return false;">&#9776;</a> <!-- onClick="function(); return false;"-->
 </div>
 
 
-<div id="my-title" style="padding-left:16px"><h2>Taurus Consulting</h2></div>
+<div id="my-title" style="padding-left:16px">
+	<img src="taurus-consulting-logo2.png" alt="Taurus Consulting" width="230" height="233"/>
+	<h2>Taurus Consulting</h2>
+</div>
 
 <div  id="my-content"  style="padding-left:16px">
 <p>We're a family owned and operated IT services company based in Victoria, British Columbia.</p>
@@ -152,7 +161,7 @@ function bio(){
 //alert('bio');
 
   document.getElementById('my-content').innerHTML  ='<div>\
-                            <div style="display: block; float: left; width: 230px; font-size: 0.85em; margin: 0px 16px 16px 16px;">\
+                            <div style="display: block; float: left; width: 230px; height: 230px; font-size: 0.85em; margin: 0px 16px 16px 16px;">\
                                 <img src="shane.jpg" alt="Shane" width="230" />\
                                 <!--Shane Ryan-->\
                             </div>\
@@ -160,11 +169,14 @@ function bio(){
                             <p>\
 Experienced IT project manager and CEO\
                             </p>\
+							<p>\
+<a class="email" href="mailto:shane.ryan@taurusconsulting.ca">shane.ryan@taurusconsulting.ca</a>\
+                            </p>\
                             <br>\
                         </div>\
 <hr style="clear: both;" color="white" />  \
                         <div>\
-                            <div style="display: block; float: left; width: 230px; font-size: 0.85em; margin: 0px 16px 16px 16px;">\
+                            <div style="display: block; float: left; width: 230px; height: 230px; font-size: 0.85em; margin: 0px 16px 16px 16px;">\
                                 <img src="ashlin.jpg" alt="Ashlin" width="230" />\
                                 <!--Ashlin Richardson-->\
                             </div>\
@@ -172,17 +184,23 @@ Experienced IT project manager and CEO\
                             <p>\
                             Technical specialist, writer and editor\
                             </p>\
+							<p>\
+<a class="email" href="mailto:ashlin.richardson@taurusconsulting.ca">ashlin.richardson@taurusconsulting.ca</a>\
+                            </p>\
                             <br>\
                         </div>\
 <hr style="clear: both;" color="white" /> \
                         <div>\
-                            <div style="display: block; float: left; width: 230px; font-size: 0.85em; margin: 0px 16px 16px 16px;">\
+                            <div style="display: block; float: left; width: 230px; height: 230px; font-size: 0.85em; margin: 0px 16px 16px 16px;">\
                                 <img src="christine.jpg" alt="Christine" width="230" />\
                                 <!--Christine Ryan-->\
                             </div>\
                             <strong>Christine Ryan</strong><br>\
                             <i>Senior Administrator</i>\
                             <p>\
+                            </p>\
+							<p>\
+<a class="email" href="mailto:christine.ryan@taurusconsulting.ca">christine.ryan@taurusconsulting.ca</a>\
                             </p>\
                             <br>\
                         </div>\
@@ -217,6 +235,21 @@ function testimonials(){
         <div class="name">-- Executive at Ministry of Environment</div><br>';
 }
 
+function contact(){
+  document.getElementById('my-content').innerHTML  ='<style>.verse{font-weight: bold; margin-left:2em; width: 444px;}</style>\
+                                                    <style>.name{text-align: right; margin-left:2em; width: 444px;}</style>\
+        <hline>\
+        <div class="verse">Phone</div>\
+        <br>\
+        <div class="verse">(778) 533-3204</div>\
+        <br><br>\
+        <div class="verse">Email</div>\
+        <br>\
+        <div class="verse"><a class="email" href="mailto:shane.ryan@taurusconsulting.ca">shane.ryan@taurusconsulting.ca</a></div>\
+        <br>';
+        
+}
+
 var s = 'cms';
 if(has_local_storage){
   s = localStorage.getItem('state')
@@ -229,6 +262,9 @@ else if(s=='testimonials'){
 }
 else if(s=='bio'){
   bio()
+}
+else if(s=='contact'){
+  contact()
 }else{
  cms()
 }
