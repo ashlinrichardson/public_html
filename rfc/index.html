@@ -4,10 +4,10 @@
 
 body{margin:0;}
 body{font-family: Arial; color: black; }
-footer{background-color: #3B5998; color: #dfe3ee;}  
+footer{background-color: #3B5998; color: white; padding: 12px 12px 12px 12px}
 
-.nav{overflow: hidden; background-color: #3B5998;}
-.nav a{float: left; display: block; color: #dfe3ee; text-align: center; padding: 14px 16px; text-decoration: none; font-size: 17px;}
+.nav{overflow: hidden; background-color:  #003466;}
+.nav a{float: left; display: block; color:  #003466; text-align: center; padding: 14px 16px; text-decoration: none; font-size: 17px;}
 .nav a:hover{ background-color: #ddd; color: black; }
 .nav a.active {background-color: #8b9dc3; color: white;}
 
@@ -25,7 +25,7 @@ footer{background-color: #3B5998; color: #dfe3ee;}
 
 h1{ color: #7c795d; font-family: 'Trocchi', serif; font-size: 45px; font-weight: normal; line-height: 48px; margin: 0; }
 h2{ color: #7c795d; font-family: 'Source Sans Pro', sans-serif; font-size: 28px; font-weight: 400; line-height: 32px; margin: 0 0 24px; }
-h3{ color: black; font-family: 'Source Sans Pro', sans-serif; font-size: 22px; font-weight: 600; line-height: 22px; margin: 5px 5px 5px; }
+h3{ color: white; font-family: 'Source Sans Pro', sans-serif; font-size: 22px; font-weight: 600; line-height: 22px; margin: 5px 5px 5px; }
 .subheader { font-size: 26px; font-weight: 300; color: #ffcc66; margin: 0 0 24px; }
 
 p{ color: #4c4a37; font-family: 'Source Sans Pro', sans-serif; font-size: 18px; line-height: 32px; margin: 0 0 24px; }
@@ -92,9 +92,11 @@ function set_active(a){
 <table style="position:relative;">
 <tr align="right">
 <td valign="bottom" halign="left">
-  <a id="cms" href="index.html" onclick="set_active('cms')">
-  <img src="taurus-consulting-logo2.png" alt="Taurus Consulting" width="111" height="111"/>
-  <br><h3>Taurus Consulting</h3><!--<img src="taurus-consulting-logo.png" height=25>-->
+<a id="cms" href="index.html" onclick="set_active('cms')">
+  <table>
+  <tr><td align="center"><img src="taurus-consulting-logo2.png" alt="Taurus Consulting" width="111" height="111"/></td></tr>
+  <tr><td align="bottom"><h3>Taurus Consulting</h3></td></tr> <!--<img src="taurus-consulting-logo.png" height=25>-->
+  </table>
 </a>
 </td>
 
@@ -103,48 +105,41 @@ function set_active(a){
   <a id="cms" href="index.html" onclick="set_active('cms')"><h3>CMS-Lite Services</h3></a>
 </td>
 -->
-<td valign="bottom"> 
-<a id="bio" href="index.html"  onclick="set_active('bio')"><h3>Team</h3></a>
-  <!--<a id="contact" href="index.html"  onclick="set_active('contact')">Contact</a>-->
-</td>
-<td valign="bottom">
+<td valign="bottom"><table><tr><td></td></tr><tr><td>
+  <a id="bio" href="index.html"  onclick="set_active('bio')"><h3>Team</h3></a>
+</tr></td></table></td>
+<td valign="bottom"><table><tr><td></td></tr><tr><td>
 <a id="reviews" href="index.html"  onclick="set_active('testimonials')"><h3>Reviews</h3></a>
-</td>
-<td valign="bottom">
+</tr></td></table></td>
+<td valign="bottom"><table><tr><td></td></tr><tr><td>
 <a id="contact" href="index.html"  onclick="set_active('contact')"><h3>Contact</h3></a>
-</td>
-<td valign="bottom">
+</tr></td></table></td>
+<td valign="bottom"><table><tr><td></td></tr><tr><td>
 <a href="javascript:void(0);" style="font-size:15px;" class="icon"  onClick="myFunction(); return false;">&#9776;</a> <!-- onClick="function(); return false;"-->
-</td>
+</tr></td></table></td>
 </tr>
 </table>
 </div>
-
 <!--
 <div id="my-title" style="padding-left:16px">
 	<img src="taurus-consulting-logo2.png" alt="Taurus Consulting" width="199" height="199"/>
 	<h2>Taurus Consulting</h2>
 </div>
 -->
-<br>
 <div  id="my-content"  style="padding-left:16px">
 <h4>The Company</h4>
 <p>Family owned and operated IT services company based in Victoria, British Columbia.<br>
 We contract, consult and develop for private corporations and governments (provincial and municipal).</p>
-<h4>CMS-Lite Services</h4>
+<h4>CMS-Lite Services Offered</h4>
       <ul>
-      <li>We offer experienced development and editing of online content, for the B.C. government.</li>
+      <li>Experienced development and editing of online content, for the Government of British Columbia.</li>
       <!--<li>We uphold B.C. government communications standards.</li>-->
       <li>We're trained in CMS-Lite, B.C.'s corporate content management system, by Government Communications and Public Engagement (GCPE).</li>
       </ul>
 <h4>Current Clients</h4>
       <ul>
-      <li>Government of British Columbia
-        <ul>
-          <li>Ministry of Environment (ENV)</li>
-          <li>Ministry of Forests, Lands, and Natural Resource Operations (FLNR)</li>
-        </ul>
-      </li>
+          <li>Ministry of Environment (ENV), Government of British Columbia</li>
+          <li>Ministry of Forests, Lands, and Natural Resource Operations (FLNR),Government of British Columbia</li>
       </ul>
 </div>
 
@@ -157,27 +152,25 @@ function cms(){
 document.getElementById('my-content').innerHTML = "<h4>The Company</h4>\
 <ul><li>Family owned and operated IT services company based in Victoria, British Columbia</li>\
 <li>We contract, consult and develop for private corporations and governments (provincial and municipal)</li></ul>\
-<h4>CMS-Lite Services</h4>\
+<h4>CMS-Lite Services Offered</h4>\
       <ul>\
-      <li>We offer experienced development and editing of online content, for the B.C. government</li>\
+      <li>Experienced development and editing of online content for the Government of British Columbia</li>\
       <!--<li>We uphold B.C. government communications standards</li>-->\
       <li>We're trained in CMS-Lite, B.C.'s corporate content management system, by Government Communications and Public Engagement (GCPE)</li>\
     </ul>\
 <h4>Current Clients</h4>\
       <ul>\
-      <li>Government of British Columbia\
-        <ul>\
-          <li>Ministry of Environment (ENV)</li>\
-          <li>Ministry of Forests, Lands, and Natural Resource Operations (FLNR)</li>\
-        </ul>\
-      </li></ul>";
+          <li>Ministry of Environment (ENV) <!--Government of British Columbia--></li>\
+          <li>Ministry of Forests, Lands, and Natural Resource Operations (FLNR) <!-- Government of British Columbia--></li>\
+      </ul>\
+      ";
 
 }
 
 function bio(){
 //alert('bio');
 
-  document.getElementById('my-content').innerHTML  ='<br><div>\
+  document.getElementById('my-content').innerHTML  ='<br><br><div>\
                             <div style="display: block; float: left; width: 230px; height: 230px; font-size: 0.85em; margin: 0px 16px 16px 16px;">\
                                 <img src="shane.jpg" alt="Shane" width="230" />\
                                 <!--Shane Ryan-->\
@@ -224,7 +217,7 @@ Experienced IT project manager and CEO\
 <hr style="clear: both;" color="white" />';
 }
 function testimonials(){
-  document.getElementById('my-content').innerHTML  ='<br><style>.verse{font-weight: bold; margin-left:2em; width: 444px;}</style>\
+  document.getElementById('my-content').innerHTML  ='<br><br><style>.verse{font-weight: bold; margin-left:2em; width: 444px;}</style>\
                                                     <style>.name{text-align: right; margin-left:2em; width: 444px;}</style>\
         <hline>\
         <div class="verse">"Thanks heaps for your help on this."</div>\
@@ -253,7 +246,7 @@ function testimonials(){
 }
 
 function contact(){
-  document.getElementById('my-content').innerHTML  ='<br><style>.verse{font-weight: bold; margin-left:2em; width: 444px;}</style>\
+  document.getElementById('my-content').innerHTML  ='<br><br><style>.verse{font-weight: bold; margin-left:2em; width: 444px;}</style>\
                                                     <style>.name{text-align: right; margin-left:2em; width: 444px;}</style>\
         <hline>\
         <div class="verse">Phone</div>\
