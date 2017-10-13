@@ -29,7 +29,7 @@ h3{color: white; font-family: 'Source Sans Pro', sans-serif; font-size: 22px; fo
 h4{color: #06497E; font-family: 'Source Sans Pro', sans-serif; font-size: 18px; font-weight: 400; line-height: 18px; margin: 2px 2px 2px; }
 .subheader { font-size: 26px; font-weight: 300; color: #ffcc66; margin: 0 0 24px; }
 
-p{ color: #4c4a37; font-family: 'Source Sans Pro', sans-serif; font-size: 18px; line-height: 32px; margin: 0 0 24px; }
+p{color: #4c4a37; font-family: 'Source Sans Pro', sans-serif; font-size: 16px; line-height: 32px; margin: 0 0 24px; }
 
 a:hover { color: #ffcc66 }
 
@@ -135,7 +135,7 @@ We contract, consult and develop for private corporations and governments (provi
       <ul>
       <li>Experienced development and editing of online content, for the Government of British Columbia.</li>
       <!--<li>We uphold B.C. government communications standards.</li>-->
-      <li>We're trained in CMS-Lite, B.C.'s corporate content management system, by Government Communications and Public Engagement (GCPE).</li>
+      <li>We&#8217re trained in CMS-Lite, B.C.&#8217s corporate content management system, by Government Communications and Public Engagement (GCPE).</li>
       </ul>
 <h4>Current Clients</h4>
       <ul>
@@ -150,22 +150,24 @@ We contract, consult and develop for private corporations and governments (provi
 <script>
 function cms(){
 //alert("cms");
-document.getElementById('my-content').innerHTML = "<br><h4>The Company</h4>\
-<ul><li>Family owned and operated IT services company based in Victoria, British Columbia</li>\
-<li>We contract, consult and develop for private corporations and governments (provincial and municipal)</li></ul>\
+document.getElementById('my-content').innerHTML = '\
+<div style="width: 666px;"> \
+<br><h4>The Company</h4>\
+<ul><li>Family owned and operated IT services company based in Victoria, B.C.</li>\
+<li>We contract, consult and develop for private corporations and provincial and municipal governments</li></ul>\
 <h4>CMS-Lite Services Offered</h4>\
       <ul>\
       <li>Experienced development and editing of online content for the Government of British Columbia</li>\
       <!--<li>We uphold B.C. government communications standards</li>-->\
-      <li>We're trained in CMS-Lite, B.C.'s corporate content management system, by Government Communications and Public Engagement (GCPE)</li>\
+      <li>We&#8217re trained in CMS-Lite, B.C.&#8217s corporate content management system, by Government Communications and Public Engagement (GCPE)</li>\
     </ul>\
 <h4>Current Clients</h4>\
       <ul>\
           <li>Ministry of Environment (ENV) <!--Government of British Columbia--></li>\
           <li>Ministry of Forests, Lands, and Natural Resource Operations (FLNR) <!-- Government of British Columbia--></li>\
       </ul>\
-      ";
-
+</div>\
+';
 }
 
 function bio(){
@@ -177,8 +179,7 @@ function bio(){
                                 <!--Shane Ryan-->\
                             </div>\
                             <h4>Shane Ryan, MBA</h4><i>Owner and Senior Consultant</i>\
-                            <p>\
-Experienced IT project manager and CEO\
+<p>Experienced IT project manager and CEO\
                             </p>\
 							<p>\
 <h4><a class="email" href="mailto:shane.ryan@taurusconsulting.ca">shane.ryan@taurusconsulting.ca</a>\
