@@ -1,22 +1,49 @@
-<html><title>Ashlin Richardson | Contractor | http://ashlinrichardson.com</title>
-<body><style>body{margin:0;  opacity: 1.0; }</style>
+<!-- HTML/js Template copyright Taurus Consulting-->
+<html>
+<head>
 <style>
-.top-left {
-    position: absolute;
-    top: 8px;
-    left: 16px;
-    float: left;
+body{margin:0;}
+body{font-family: Arial; color: black; font-size:16px }
+ol{font-family: Arial; color: black; font-size:16px}
+
+footer{background-color: black; color: white; padding: 12px 12px 12px 12px}
+
+.nav{overflow: hidden; background-color:  black;}
+.nav a{float: left; display: block; color:  #003466; text-align: center; padding: 14px 16px; text-decoration: none; font-size: 17px;}
+.nav a:hover{ background-color: #ddd; color: black; }
+.nav a.active {background-color: #8b9dc3; color: white;}
+
+.nav .icon{ display: none;}
+
+@media screen and (max-width: 600px) {
+  .nav a:not(:first-child) {display: none;}
+  .nav a.icon { float: right; display: block; }
 }
+@media screen and (max-width: 600px) {
+  .nav.responsive {position: relative;}
+  .nav.responsive .icon{ position: absolute; right: 0; top: 0; }
+  .nav.responsive a{ float: none; display: block; text-align: left;}
+}
+
+h1{color: #7c795d; font-family: 'Trocchi', serif; font-size: 45px; font-weight: normal; line-height: 48px; margin: 0; }
+h2{color: #7c795d; font-family: 'Source Sans Pro', sans-serif; font-size: 28px; font-weight: 400; line-height: 32px; margin: 0 0 24px; }
+h3{color: white; font-family: 'Source Sans Pro', sans-serif; font-size: 22px; font-weight: 600; line-height: 22px; margin: 5px 5px 5px; }
+h4{color: #06497E; font-family: 'Source Sans Pro', sans-serif; font-size: 18px; font-weight: 400; line-height: 18px; margin: 2px 2px 2px; }
+.subheader { font-size: 26px; font-weight: 300; color: #ffcc66; margin: 0 0 24px; }
+
+p{color: #4c4a37; font-family: 'Source Sans Pro', sans-serif; font-size: 16px; line-height: 32px; margin: 0 0 24px; }
+
+a:hover { color: #ffcc66 }
+
+.email { color: #8b9dc3;}
 </style>
 
 <style>
-.tooltip {
+.tooltip{
     position: relative;
     display: inline-block;
     border-bottom: 1px dotted black;
-
 }
-
 .tooltip .tooltiptext {
     visibility: hidden;
     width: 120px;
@@ -33,183 +60,263 @@
 
 .tooltip:hover .tooltiptext {
     visibility: visible;
-}
-</style>
+}</style>
 
-
-<div class="nav" id="myTopnav">
-<div class="top-left">
-<br>
-<div class="tooltip"><a href="http://www.ashlinrichardson.com" target="_blank"><img src="http://ashlinrichardson.com/icon/photo.jpg" height=66 width=66 style="border-radius: 66px;" class="my_img"></a><span class="tooltiptext">Contractor</span></div><br><br>
-<div class="tooltip"><a href="mailto:richardson.ashlin@gmail.com"><img src="http://ashlinrichardson.com/icon/gmail.png" height=66 width=66 style="" class="my_img"></a><span class="tooltiptext">Connect by Email</span></div><br><br>
-<div class="tooltip"><a href="https://www.linkedin.com/in/ashlinrichardson/" target="_blank"><img src="http://ashlinrichardson.com/icon/linkedin.png" height=66 width=66 style="" class="my_img"></a><span class="tooltiptext">Connect on LinkedIn</span></div><br><br>
-<div class="tooltip"><a href="http://web.uvic.ca/~ashy/" target="_blank"><img src="http://ashlinrichardson.com/icon/paper.png" height=66 width=66 style="border-radius: 66px;" class="my_img"></a><span class="tooltiptext">Publications and Talks</span></div><br><br>
-<div class="tooltip"><a href="https://github.com/ashlinrichardson" target="_blank"><img src="http://ashlinrichardson.com/icon/github.png" height=66 width=66 style="border-radius: 66px;" class="my_img"></a><span class="tooltiptext">Connect on GitHub</span></div><br><br>
-<div class="tooltip"><a href="https://www.facebook.com/ashlin.richardson" target="_blank"><img src="http://ashlinrichardson.com/icon/facebook.png" height=66 width=66  style="border-radius: 66px;" class="my_img"></a><span class="tooltiptext">Connect on Facebook</span></div><br><br>
-<div class="tooltip"><a href="https://soundcloud.com/ashrichardson" target="_blank"><img src="http://ashlinrichardson.com/icon/soundcloud.jpg" height=66 width=66  style="border-radius: 66px;" class="my_img"></a><span class="tooltiptext">Connect on SoundCloud</span></div><br><br>
-<div class="tooltip"><a href="https://www.instagram.com/ashlinrichardson/" target="_blank"><img src="http://ashlinrichardson.com/icon/insta.png" height=66 width=66  style="border-radius: 66px;" class="my_img"></a><span class="tooltiptext">Connect on Instagram</span></div><br><br>
-<div class="tooltip"><a href="https://www.youtube.com/watch?v=UElo4Pt7hto&list=PLSCyKgJq4d46pVRggwiQWh_ZH2oitG90-&index=8" target="_blank"><img src="http://ashlinrichardson.com/icon/youtube.png" height=66 width=66 style="" class="my_img"></a><span class="tooltiptext">Connect on Youtube</span></div><br><br>
-<div class="tooltip"><a href="https://www.researchgate.net/profile/Ashlin_Richardson" target="_blank"><img src="http://ashlinrichardson.com/icon/researchgate.png" height=66 width=66 style="border-radius: 66px;" class="my_img"></a><span class="tooltiptext">Connect on ResearchGate</span></div><br><br>
-</div>
-<!--
-<a id="main" href="index.html" onclick="set_active('main')">Home</a>
--->
-</div>
-
-  <!-- <a id="bio" href="index.html"  onclick="set_active('bio')">Team</a> -->
-</div>
-
-<script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-98367425-1', 'auto'); ga('send', 'pageview')
-</script>
 <script>
-var hsv2rgb = function(h,s,v){
-  var rgb, i, data = []
-  if(s === 0){
-    rgb = [v, v, v]
-  }else{
-    h = h / 60.; i = Math.floor(h); data = [v*(1.-s), v * (1.-s*(h-i)), v*(1.-s*(1.-(h-i)))]
-    switch(i){
-      case 0:  rgb = [v,       data[2], data[0]]; break
-      case 1:  rgb = [data[1], v,       data[0]]; break
-      case 2:  rgb = [data[0], v,       data[2]]; break
-      case 3:  rgb = [data[0], data[1], v      ]; break
-      case 4:  rgb = [data[2], data[0], v      ]; break
-      default: rgb = [v,       data[0], data[1]]; break
-    }
+  var has_local_storage = false;
+  try{
+    var a = localStorage.getItem('state')
+    localStorage.setItem('state',a)
+    has_local_storage = true;
   }
-  return '#' + rgb.map(function(x){ 
-    return ("0" + Math.round(x*255.).toString(16)).slice(-2);
-  }).join('');
-}
-
-var canvas = document.createElement('canvas');document.body.appendChild(canvas)
-var my_x = 0, my_y = 0, last_x = 0, last_y = 0, dx = 0, dy = 0;
-
-/* load image data */ 
-function load_img(fn){ var img = new Image(); img.src = fn; return img}
-
-/* draw image */
-function draw_img(x, ctx){
-  ctx.globalAlpha =  1. - .5*((Math.abs(dx) + Math.abs(dy)) /( ctx.h() + ctx.w())) 
-  if(ctx.w() > ctx.h()){
-    ctx.drawImage(x, 0, 0, ctx.w(), ctx.w() * x.height / x.width)
+  catch(e){
+    has_local_storage = false;
   }
-  else{
-    ctx.drawImage(x, 0, 0, ctx.h() * x.width/ x.height, ctx.h())
-  }
-}
-
-var img = load_img("_A7A8515_.jpg"), canvas = document.getElementsByTagName("canvas")[0], ctx = canvas.getContext("2d")
-ctx.font_size = 18
-ctx.w = function(){ return window.outerWidth}
-ctx.h = function(){ return window.outerHeight}
-
-var symbol = load_img('linked-in.png')
-var draw_symbol = function(){
-  var s_f = 7, pad = ctx.w()/20., s = symbol
-  var ww = window.innerWidth, wh = window.innerHeight
-  var w = ww - pad, h = wh - pad, w_s = s.width, h_s = s.height
-  var wf = (ww - pad) / (s_f * w_s), lwf = w_s * wf, lhf = h_s * wf
   
-
-  ctx.save();
-  ctx.globalAlpha = 0.5;
-  //ctx.drawImage(s, w - lwf, h - lhf, lwf, lhf)
-  ctx.drawImage(s, pad, h - lhf, lwf, lhf)
-  ctx.restore()
-}
-
-/* wrap text around a window region-- via ashblue */
-function wrap_text(my_str, start_x, start_y, width_frac, my_color, font_frac){
-  if(start_x == null) start_x = 0
-  if(start_y == null) start_y = 0
-  if(width_frac == null) width_frac = 1.
-  if(my_color == null) my_color = 'black'
-  if(font_frac == null) font_frac = 1.
-
-  var s = my_str.toString(), myX = start_x, myY = start_y, line = '', lines = [], w = ctx.w(), h = ctx.h(), line_test = '', words = s.split(' '), font_size = ctx.font_size * font_frac;
-  ctx.font = font_size +'px Arial'
-  ctx.fillStyle = my_color
-  /* place words one by one */
-  for(var j = 0; j < words.length; j++){
-    line_test = line + words[j] + ' '
-
-    /* wrap if over the edge */
-    if(ctx.measureText(line_test).width > (w* width_frac)){
-      myY = lines.length * font_size + font_size
-      lines.push({text: line, height: myY})
-      line = words[j] + ' '
-    }else{
-      line = line_test
+  if(has_local_storage){
+    if(localStorage.getItem('state') == null){
+      localStorage.setItem('state', 'cms')
     }
   }
-
-  /* catch last line if something left over */
-  if(line.length > 0){
-    current_y = lines.length * font_size + font_size
-    lines.push({text: line.trim(), height: current_y})
-  }
-
-  /* plot text */
-  for(var j = 0, len = lines.length; j < len; j++){
-    if(my_color != 0)
-      ctx.fillStyle = my_color
-    else
-      ctx.fillStyle = hsv2rgb( (1.*j) * 360. / (1. * lines.length), .19, .29) 
-    ctx.fillText(lines[j].text, myX, lines[j].height + start_y)
-  }
-}
-
-/* canvas resize */
-function resize(){
-  canvas.width = ctx.w(); 
-  canvas.height = ctx.h();
-/*
-  if(canvas.width < 800){
-    canvas.width = 800;
-  }
-  if(canvas.height < 600){
-    canvas.height = 600;
-  }
-*/
-  ctx.moveTo(0,0);
-}
-
-window.onresize = function(event){ update()}
-
-function update(){
-  resize()
-  draw_img(img, ctx)
-  ctx.font_size = 44
-  if(ctx.w() > ctx.h()){
-    ctx.font_size = ctx.w() / 25 
-  }
-  else{
-    ctx.font_size = ctx.h() / 25
-  }
-  var dx = Math.max(111, ctx.w() / 15.)
-  var dy = 18; //d //15; //ctx.h() / 30.
-  wrap_text("Ashlin Richardson", dx, dy, 1., null)
-  wrap_text("Data Scientist, Engineer, Developer and Communicator, passionately seeking evidence based understanding vital to advancement", dx, dy+1.33*ctx.font_size, .33, null, .66)  
- // draw_symbol()
-}
-
-window.onload = function(){ update()}
-
-document.onmousemove = function(e){
-  return;
-  var x = e.clientX, y = e.clientY; last_x = my_x; last_y = my_y; my_x = x; my_y = y;
-  dx = my_x - last_x;  dy = my_y - last_y;
-  update()
-}
 </script>
 
+<script>
+/* Toggle between adding and removing the "responsive" class to nav when the user clicks on the icon */
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "nav") {
+        x.className += " responsive";
+    } else {
+        x.className = "nav";
+    }
+}
+</script>
+</head>
+<body style="background-color:rgb(255, 255, 255)">
 
+<script>
+  // set home content by calling home() ?
+  function set_active(a){
+    var m ='set_active'
+    console.log('set_active()')
+    if(has_local_storage){
+      console.log(localStorage.getItem('state'))
+      localStorage.setItem('state', a)
+    }
+      document.getElementsByClassName('active')[0].classList.remove('active');
+      document.getElementByName(a).classList.add('active')
+  }
+</script>
 
+<div class="nav" id="myTopnav" style="position:relative;">
 
+<table style="position:relative;">
+<tr align="right">
+<td valign="bottom" halign="left">
+<a id="cms" href="index.html" onclick="set_active('cms')">
+  <table>
+  <tr><td align="center"><img src="ashlin.png" alt="Ashlin Richardson" width="222" height="222"/></td></tr>
+  <tr><td align="bottom"><h3>Ashlin Richardson</h3></td></tr> <!--<img src="taurus-consulting-logo.png" height=25>-->
+  </table>
+</a>
+</td>
+
+<td valign="bottom"><table><td></td></tr><tr><td>
+  <a id="letters" href="index.html"  onclick="set_active('letters')"><h3>Letters</h3></a>
+</tr></td></table></td>
+
+<td valign="bottom"><table><td></td></tr><tr><td>
+  <a id="talks" href="index.html"  onclick="set_active('talks')"><h3>Talks</h3></a>
+</tr></td></table></td>
+
+<td valign="bottom"><table><tr><td></td></tr><tr><td>
+<a id="reviews" href="index.html"  onclick="set_active('testimonials')"><h3>Feedback</h3></a>
+</tr></td></table></td>
+
+<td valign="bottom"><table><tr><td></td></tr><tr><td>
+<a id="contact" href="index.html"  onclick="set_active('contact')"><h3>Contact</h3></a>
+</tr></td></table></td>
+
+<td valign="bottom"><table><tr><td></td></tr><tr><td>
+<a href="javascript:void(0);" style="font-size:15px;" class="icon"  onClick="myFunction(); return false;">&#9776;</a> <!-- onClick="function(); return false;"-->
+</tr></td></table></td>
+</tr></table></div>
+<!--
+<div id="my-title" style="padding-left:16px">
+	<img src="taurus-consulting-logo2.png" alt="Taurus Consulting" width="199" height="199"/>
+	<h2>Taurus Consulting</h2>
+</div>
+-->
+<div  id="my-content"  style="padding-left:16px"><br>
+This site requires JavaScript to view. Please enable JavaScript and try again! cheers
+</div>
+
+<footer id="footer">
+  <div id="copyright_text">&nbsp;&nbsp;&nbsp;Copyright &copy; 2021 Ashlin Richardson</div>
+</footer>
+
+<script>
+function cms(){
+//alert("cms");
+document.getElementById('my-content').innerHTML = '\
+<div style="width: 700px;"> \
+<br><h4>About</h4>\
+<br>\
+ As an interdisciplinary data scientist, engineer, developer and communicator I compassionately seek the evidence-based insight so vital for advancement, while approaching business relationships with a view of constantly improving them.\
+ <br><br>Applying extensive practial expertise in computing science, mathematical statistics and information theory I work with large organizations helping to explore their large heterogeneous data,\
+ achieving rigorous understanding to support enhanced decision capability.\
+ <br><br>Industry and technology agnostic,\
+ I work from a foundation in scientific computing and signal processing for environment monitoring, especially multitemporal geospatial data fusion and physical interpretation, with business accomplishments including consulting with science, engineering, financial and health services industries.  I am a formidable technical writer<br> conducting literary research for science, engineering, legal and patent applications.<br><br>\
+<!--<h4>Professional Affiliations</h4>\
+      <ul>\
+<li>IEEE Geoscience and Remote Sensing Society</li>\
+      </ul>\
+<h4>Experience</h4>\
+      <ul>\
+          <li>Digital Remote Sensing Group, Pacific Forestry Centre</li>\
+          <li>Ministry of Environment (ENV) </li>\
+          <li>Ministry of Forests, Lands, and Natural Resource Operations (FLNR) </li>\
+      </ul>-->\
+</div>\
+';
+}
+
+function letters(){
+//alert('bio');
+
+  document.getElementById('my-content').innerHTML  ='\
+  <div style="width: 700px;">\
+  <br><h4>Letters</h4>\
+  <p style="font-size:10px"><ol>\
+  <li>CovidSIMVL -- Transmission Trees, Superspreaders and Contact Tracing in Agent Based Models of Covid-19, E. Chang, K. Moselle, A Richardson, MedArxiv December 2020</li>\
+  <li><a href="http://ashlinrichardson.com/uvic/papers/US20190197637A1.pdf">Method and System for Valuation of a Pool of Real Estate Assets, A. Gant, D. Marinakis, A. Richardson, US Patent 20190197637A1, June 2019</a></li>\
+  <li>A Deceleration Model for Bicycle Peloton Dynamics and Group Sorting, H. Trenchard,  E. Ratamero, A. Richardson, M. Perc, Applied Mathematics and Computation, December 2014</li>\
+  <li><a href="http://ashlinrichardson.com/uvic/papers/2014_guo_igarss.pdf"> Applying The Freeman-Durden Decomposition to Compact Polarimetric SAR Interferometry, S. Guo, Y. Li, Q. Yin, H. Chen, A. Richardson, W. Hong, proc. IEEE IGARSS, Québec City, Canada, July 2014</a></li>\
+  <li><a href="http://ashlinrichardson.com/uvic/papers/2014_richardson_igarss.pdf">Hierarchical Unsupervised Nonparametric Classification of Polarimetric SAR Time Series Data, A. Richardson, D. Goodenough, H. Chen, proc. IEEE IGARSS, Québec City, Canada, July 2014</a></li>\
+  <li>Forest Stand Level Correlation Analysis of ALOS Palsar Signatures, W. Zhang, D. Goodenough, A. Richardson, E. Chen, Z. Li, proc. IEEE IGARSS, Québec City, Canada, July 2014</li>\
+  <li>Collective Behaviour and the Identification of Phases in Bicycle Peletons, H. Trenchard, A. Richardson, E. Ratamero, M. Perc, Physica A, February 2014</li>\
+  <li><a href="http://dspace.library.uvic.ca:8080/bitstream/handle/1828/4304/Richardson_Ashlin_MSc_2012.pdf">Nonlocal Macroscopic Traffic Modelling Via Laws Of Conservation Type, A. Richardson, M.Sc. Thesis, University of Victoria, Canada, October 2012</a> <a href="https://dspace.library.uvic.ca:8443/handle/1828/4304/statistics">[stats]</a></li>\
+  <li>Compact Polarimetry for Forest Applications, D. Goodenough, H. Chen, S. Cloude, A. Richardson, P. Gordon, proc. 33rd Canadian Symposium on Remote Sensing, Ottawa, Canada, June 2012</li>\
+  <li><a href="http://ashlinrichardson.com/uvic/papers/2011_chen_cjrs.pdf">Mapping Fire Scars Using Radarsat-2 Polarimetric SAR Data, D. Goodenough, H. Chen, A. Richardson, S. Cloude, W. Hong, Y. Li, Can. J. Remote Sensing, Vol. 37, No. 5, pp. 1-10, 2011</a></li>\
+  <li><a href="http://ashlinrichardson.com/uvic/papers/2011_richardson.pdf">Locally Adaptive Hierarchical Cluster Termination With Application To Individual Tree Delineation, A. Richardson, D. Leckie, March 2011</a></li>\
+  <li><a href="http://ashlinrichardson.com/uvic/papers/2010_agueh_krm.pdf">Analysis And Simulations Of A Refined Flocking And Swarming Model Of Cucker-Smale Type, M. Agueh, R. Illner, A. Richardson, Kinetic And Related Models (KRM), Vol. 4, No. 1, Mar. 2011</a></li>\
+  <li>Mapping Forest Scars Using Radarsat-2 Polarimetric SAR Data, D. G. Goodenough, H. Chen, A. Richardson, Y. Li, proc. 3rd Workshop on Radarsat-2, Canadian Space Agency, St. Hubert, Quebec, September 2010</li>\
+  <li><a href="http://ashlinrichardson.com/uvic/papers/2010_richardson_igarss.pdf">Unsupervised Nonparametric Classification of Polarimetric SAR Data Using The K-nearest Neighbor Graph, A. Richardson, D. G. Goodenough, H. Chen, G. Hobart, B. Moa, W. Myrvold, proc. IEEE IGARSS, Honolulu, Hawaii, July 2010</a></li>\
+  <li><a href="http://ashlinrichardson.com/uvic/papers/2010_li_igarss.pdf"> Eigen Decomposition Parameter Based Forest Mapping Using Radarsat-2 Polsar Data, Y. Li, W. Hong, F. Cao, E. Chen, D. G. Goodenough, H. Chen, A. Richardson, proc. IEEE IGARSS, Honolulu, Hawaii, July 2010</a></li>\
+  <li>A Framework For Efficiently Parallelizing Nonlinear Hyperspectral Noise Reduction, D. G. Goodenough, T. Han, B. Moa, A. Dhaliwal, H. Chen, A. Richardson, proc. IEEE IGARSS, Honolulu, Hawaii, July 2010 (poster)</li>\
+  <li><a href="http://ashlinrichardson.com/uvic/papers/2010_goodenough_astro.pdf">Mapping Fire Scars From Space Using Radarsat-2 Polarimetric SAR, D. G. Goodenough, W. Hong, H. Chen, Y. Li, A. Richardson, F. Cao, E. Chen, P. Wang, G. Hobart, proc. Canadian Aeronautics and Space Institute (CASI) ASTRO, Toronto, 2010</a></li>\
+  <li>A Comparison Of Chris And AISA Data For Forest Classification, D. G. Goodenough, K. O. Niemann, G. Quinn, H. Chen, A. Richardson, proc. ESA ESRIN Hyperspectral Workshop, Frascati, Italy, 2010</li>\
+  <li>Preliminary evaluation of Radarsat-2 polarimetric SAR data for forest applications, D.G. Goodenough, H.Chen, G. Hobart, A. Richardson, W. Hong, F. Cao, E. Chen. proc. IET Intl. Radar Conference, Guilin, China, 2009</li>\
+  <li>Topographic Relief Compensation On Spaceborne Polarimetric SAR For Forest Applications, H. Chen, D. G. Goodenough, A. Dyk, G. Hobart, A. Richardson, B. Moa, A. Wilke, proc. IEEE Radar Conference 2009, Pasadena, 2009</li>\
+  <li>Fusion of Radar and Hyperspectral Data for Forest Applications, D. G. Goodenough, H. Chen, A. Dyk, G. Hobart, A. Richardson, proc. International Astronautical Congress, Glasgow, 2008</li>\
+  <li>Data Fusion Study Between Polarimetric SAR, Hyperspectral And LiDAR Data For Forest Information, D. G. Goodenough, H. Chen, A. Dyk, G. Hobart, A. Richardson, proc. IEEE IGARSS, Boston, 2008</li>\
+  <li>Hyperspectral Sensing of Forests, D. G. Goodenough, A. Dyk, H. Chen, G. Hobart, K. O. Niemann, A. Richardson, proc. SPIE Second International Conference on Space Information Technology (ICSIT), Huazhong University of Science and Technology, Wuhan, China, 2007</li>\
+  </ol>';
+}
+
+function talks(){
+//alert('bio');
+
+  document.getElementById('my-content').innerHTML  ='\
+  <div style="width: 700px;">\
+  <br><h4>Talks</h4>\
+  <ol>\
+  <li>Semi-supervised Classification of Images in Python, BC Gov Data Science CoP and Python Programming CoP, Mar 31 2021</li>\
+  <li>Fuel Type Layer Project, BC Gov DM Board on Integrated Data, Mar 3 2021</li>\
+  <li>Fuel Type Layer Project, BC Gov Fire Behaviour CoP, Feb 22 2021</li>\
+  <li>Can We Predict Forest Fires Before They Start?, BC Gov Data Science CoP, Nov 24 2020</li>\
+  <li>Radar in Forestry, BC Gov Remote Sensing CoP, Oct 13 2020</li>\
+  <li>Can the Data Speak? Reflections on Unsupervised Classification, BC Gov Python Programming CoP, Oct 13 2020</li>\
+  <li><a href="http://ashlinrichardson.com/uvic/talks/2014_richardson_igarss.pdf">Hierarchical Unsupervised Nonparametric Classification of Polarimetric SAR Time Series Data, IEEE IGARSS, Québec City, Canada, July 2014</a></li>\
+  <li><a href="http://ashlinrichardson.com/uvic/talks/2014_guo_igarss.pdf">Applying the Freeman Durden Decomposition to Compact polarimetric SAR Interferometry, IEEE IGARSS, Québec City, Canada, July 2014</a></li>\
+  <li><a href="http://ashlinrichardson.com/uvic/talks/2013_0418_richardson_uvic.pdf">Hierarchical Mode Analysis, UVic CSC 578 project, April 2014</a></li>\
+  <li><a href="http://ashlinrichardson.com/uvic/talks/2011_0722_richardson_iciam.pdf">A Refined Macroscopic Traffic Model of Herty-Illner Type, ICIAM, Vancouver, Canada, July 2011</a></li>\
+  <li><a href="http://ashlinrichardson.com/uvic/talks/2010_09_cloude_forestsat.pdf">Radar Polarimetry for Forestry Applications: ALOS and Radarsat-2 studies in Canada, ForestSat, Lugo, Spain, Sept 2010</a></li>\
+  <li><a href="http://ashlinrichardson.com/uvic/talks/2010_richardson_igarss.pdf">Unsupervised Nonparametric Classification of Polarimetric SAR Data using the K-nearest Neighbour Graph, IEEE IGARSS, Honolulu, Hawaii, July 2010</a></li>\
+  <li><a href="http://ashlinrichardson.com/uvic/talks/2010_0324_richardson_uvic.pdf">A Novel Pattern Recognition Methodology, UVic Applied Mathematics Talks, Victoria, Canada, March 2010</a></li>\
+  <li><a href="http://ashlinrichardson.com/uvic/talks/radar/201002_PFC_radar_fire_mapping.pdf">Historical Fire Mapping by Polarimetric SAR, Pacific Forestry Centre, February 2020</a></li>\
+  <li><a href="http://ashlinrichardson.com/uvic/talks/radar/20100228_richardson_fires_cloude_params.pdf">Fire Scar Discrimination using Cloude\'s Parameters, Pacific Forestry Centre, February 2010</a></li>\
+  <li><a href="http://ashlinrichardson.com/uvic/talks/radar/200904_IET_Radar_RS2_forestry.pdf">Development and Utilization of Radarsat-2 for Forest Applications, IET Int\'l Radar Conference, April 2009</a></li>\
+  <li><a href="http://ashlinrichardson.com/uvic/talks/radar/20091122_ALOS_historical_fires.pdf">Investigating of Historical Fire Scars using Polarimetric SAR, 3rd Joint ALOS Symposium, November 2009</a></li>\
+  <li><a href="http://ashlinrichardson.com/uvic/talks/radar/200905_IEEE_Radarcon_topo.pdf">Topographic Relief Compensation on Spaceborne Polarimetric SAR for Forest Applications, IEEE Radar Conference, May 2009</a></li>\
+  <li><a href="http://ashlinrichardson.com/uvic/talks/radar/200809_IAC_hyperspec_radar_fusion.pdf">Fusion of Radar and Hyperspectral Data for Forest Applications, 59th International Aeronautical Conference, September 2009</a></li>\
+  <li><a href="http://ashlinrichardson.com/uvic/talks/radar/20081209_CFS_SAR_activities.pdf">SAR Activities at PFC, Pacific Forestry Centre, December 2008</a></li>\
+  <li><a href="http://ashlinrichardson.com/uvic/talks/radar/200811_alos_forest.pdf">Evaluation of ALOS PALSAR Data for Forest Classification, ALOS Symposium, November 2008</a></li>\
+  <li><a href="http://ashlinrichardson.com/uvic/talks/radar/20081110_ICSIT_hyperspectral.pdf">Hyperspectral Sensing of Forests, 2nd Int\'l Conference on Space Information Technology, November 2007</a></li>\
+  <li><a href="http://ashlinrichardson.com/uvic/talks/radar/200809_Radarsat2_Workshop_radar_forestry.pdf">Radar Applications for Forestry, Radarsat-2 Workshop, September 2008</a></li>\
+  <li><a href="http://ashlinrichardson.com/uvic/talks/radar/200807_IGARSS_radar_fusion.pdf">Data Fusion Study between Polarimetric SAR, Hyperspectral and LIDAR Data for Forest Information, IGARSS, July 2008</a></li>\
+  <li><a href="http://ashlinrichardson.com/uvic/talks/radar/200711_alos_fusion.pdf">Data Fusion of Polarimetric Radar and Hyperspectral Images, ALOS Symposium, November 2007</a></li>\
+  <li><a href="http://ashlinrichardson.com/uvic/talks/radar/200709_CSA_ASAR_fusion.pdf">Data Fusion Study between Polarimetric SAR, Hyperspectral and LiDAR for Forest Information, CSA ASAR Workshop, September 2007</a>\
+  <\ol>';
+}
+
+function testimonials(){
+  document.getElementById('my-content').innerHTML  ='<br><br><style>.verse{font-weight: bold; margin-left:1em;}</style>\
+                                                    <style>.name{text-align: left; margin-left:2em;}</style>\
+        <hline>\
+        <div class="verse">"Thanks heaps for your help on this."</div>\
+        <br>\
+        <div class="name">-- Official at Ministry of Forests, Lands and Natural Resource Operations</div>\
+        <br><br>\
+        <div class="verse">"You folks are quick! Thanks, much appreciated."</div>\
+        <br>\
+        <div class="name">-- Director at Ministry of Environment</div>\
+        <br><br>\
+        <div class="verse">"Thanks for all your help! You are awesome."</div>\
+        <br>\
+        <div class="name">-- Official at Ministry of Environment</div>\
+        <br><br>\
+        <div class="verse">"You&apos;re awesome at this, and gaining a solid reputation here in the branch as someone who can be relied on. Thanks for all your good work."</div>\
+        <br>\
+        <div class="name">-- Official at Ministry of Forests, Lands and Natural Resource Operations</div>\
+        <br><br>\
+        <div class="verse">"Thanks for the great and quick work on this-- as always truly appreciated."</div>\
+        <br>\
+        <div class="name">-- Manager at Ministry of Environment</div>\
+        <br><br>\
+        <div class="verse">"Thank you so very much, Ash, we really appreciate all of your efforts."</div>\
+        <br>\
+        <div class="name">-- Executive at Ministry of Environment</div><br><br>';
+}
+
+function contact(){
+  document.getElementById('my-content').innerHTML  ='<br><style>.verse{font-weight: bold; margin-left:2em; width: 444px;}</style>\
+                                                    <style>.name{text-align: right; margin-left:2em; width: 444px;}</style>\
+                <br>\
+<div class="nav" id="myTopnav">\
+<div class="top-left">\
+<br>\
+<div class="tooltip"><a href="mailto:ashlin.richardson@gmail.com">                    <img src="index_files/gmail.png" style="" class="my_img" width="66" height="66"></a><span class="tooltiptext">Email Ashlin</span></div>\
+<div class="tooltip"><a href="https://github.com/ashlinrichardson">                   <img src="index_files/github.png" style="" class="my_img" width="66" height="66"></a><span class="tooltiptext">Connect on GitHub</span></div>\
+<div class="tooltip"><a href="https://www.researchgate.net/profile/Ashlin_Richardson"><img src="index_files/researchgate.png" style="" class="my_img" width="66" height="66"></a><span class="tooltiptext">Connect on ResearchGate</span></div>\
+<div class="tooltip"><a href="https://soundcloud.com/ashrichardson">                  <img src="index_files/soundcloud.jpg" style="" class="my_img" width="66" height="66"></a><span class="tooltiptext">Connect on SoundCloud</span></div>\
+<div class="tooltip"><a href="https://www.youtube.com/watch?v=UElo4Pt7hto&amp;list=PLSCyKgJq4d46pVRggwiQWh_ZH2oitG90-&amp;index=8"><img src="index_files/youtube.png" style="" class="my_img" width="66" height="66"></a><span class="tooltiptext">Connect on Youtube</span></div>\
+</div>\
+</div>';
+}
+
+var s = 'cms';
+if(has_local_storage){
+  s = localStorage.getItem('state')
+}
+if(s=='cms'){
+  cms()
+}
+else if(s=='testimonials'){
+  testimonials()
+}
+else if(s=='talks'){
+  talks()
+}
+else if(s=='letters'){
+  letters()
+}
+else if(s=='contact'){
+  contact()
+}
+else{
+ cms()
+}
+</script>
 </body>
 </html>
