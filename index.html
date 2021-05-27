@@ -132,7 +132,7 @@ function myFunction() {
 </tr></td></table></td>
 
 <td valign="bottom"><table><tr><td></td></tr><tr><td>
-<a id="reviews" href="index.html"  onclick="set_active('testimonials')"><h3>Feedback</h3></a>
+<a id="reviews" href="index.html"  onclick="set_active('feedback')"><h3>Feedback</h3></a>
 </tr></td></table></td>
 
 <td valign="bottom"><table><tr><td></td></tr><tr><td>
@@ -253,7 +253,7 @@ function talks(){
   <\ol>';
 }
 
-function testimonials(){
+function feedback(){
   document.getElementById('my-content').innerHTML  ='<br><br><style>.verse{font-weight: bold; margin-left:1em;}</style>\
                                                     <style>.name{text-align: left; margin-left:2em;}</style>\
         <hline>\
@@ -307,23 +307,40 @@ function contact(){
 </div>';
 }
 
+const queryString = window.location.search; 
+const urlParams = new URLSearchParams(queryString);
+const param = urlParams.get('page');
 var s = 'cms';
-if(has_local_storage){
-  s = localStorage.getItem('state')
+if(param && (param =='cms' || param =='feedback' || param == 'talks' || param == 'letters' || param == 'contact')){
+  s = param;
+  if(has_local_storage){
+    localStorage.setItem('state', s)
+  }
 }
+else{
+  if(has_local_storage){
+   s = localStorage.getItem('state')
+  }
+}
+
 if(s=='cms'){
+  // set_active('cms')
   cms()
 }
-else if(s=='testimonials'){
-  testimonials()
+else if(s=='feedback'){
+  // set_active('feedback')
+  feedback()
 }
 else if(s=='talks'){
+  // set_active('talks')
   talks()
 }
 else if(s=='letters'){
+  // set_active('letters')
   letters()
 }
 else if(s=='contact'){
+  // set_active('contact')
   contact()
 }
 else{
